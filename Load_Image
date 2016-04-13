@@ -1,0 +1,29 @@
+import UIKit
+
+class ViewController: UIViewController {
+    
+    @IBOutlet var image_element: UIImageView!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        load_image("http://www.yourURL.com/Images/yourImage.png")
+        
+    }
+
+    func load_image(urlString:String)
+    {
+        
+        var imgURL: NSURL = NSURL(string: urlString)!
+        let request: NSURLRequest = NSURLRequest(URL: imgURL)
+        NSURLConnection.sendAsynchronousRequest(
+            request, queue: NSOperationQueue.mainQueue(),
+            completionHandler: {(response: NSURLResponse!,data: NSData!,error: NSError!) -> Void in
+                if error == nil {
+                    self.image_element.image = UIImage(data: data)
+                }
+        })
+        
+    }
+
+
+}
