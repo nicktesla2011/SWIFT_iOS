@@ -1,0 +1,53 @@
+//: Playground - noun: a place where people can play
+
+import UIKit
+
+
+/* Swift uses 3 collection types
+ • Arrays
+ • Sets
+ • Dictionaries
+ 
+ This Playground concerns itself with Dictionaries
+ A Dictionary defined in Swift 2.2 is a collection of unordered Key Value Associations.
+ What does that mean?
+ Unlike Arrays Which have an order (0,1,2,etc) Dictionaries do 
+ not have that strict order.
+ 
+ What a Dicitionary has is an associated pair of a key and logical value associated with that key. For example
+ Animal, Dog
+ Earth, Continent
+ Food, Burrito
+ 
+ You create a Dictionary through this context
+ 
+ var namesOfAnimals = [Canine: Dog, Avian: Bird, Reptile: Snake]
+ 
+ WHEN TO USE A DICTIONARY?
+ 
+ "You use a dictionary when you need to look up values based on their identifier, in much the same way that a real-world dictionary is used to look up the definition for a particular word."
+ 
+ Remember: If your key and your value are both strings make sure you write your strings with quotes on both.
+ */
+
+var animalPhylum = ["Acanthocephala" : "Thorny-headedworms", "Ctenophora" : "Comb Jellies", "Mollusca": "Oysters"]
+
+for (phylum, species)in animalPhylum {
+    
+    print("\(species)'s phylum is \(phylum)")
+}
+
+
+//Key Value pair with integers
+
+var peopleAges = ["Joe" : 32, "Bob" : 45, "Susan": 33]
+
+for (people, ages)in peopleAges {
+    
+    print("\(people)'s age is \(ages)")
+}
+
+
+
+
+ 
